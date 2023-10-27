@@ -19,3 +19,6 @@ Push your build image tagged to your dockerhub account or any container registry
 4. Choose a name and select docker container as source 
 5. Likewise select Dockerhub as imagesource and select public access as well as your tagged docker image that you uploaded to Dockerhub
 6. You should be able to see the game application thorugh the link azure provides or you can map to your custom domin
+
+## You can view my deployment on the link below
+https://2048app.azurewebsites.net/
