@@ -9,6 +9,20 @@ The link to Ghazanfar's project https://medium.com/@ghazanfaralidevops/devops-pr
 2.Next you need to build and tag your docker image as you please
 3.Run a container from the build image and expose port 8081 to access from your local browser the application
 
+## Explaining the Dockefile
+1. Ubuntu was used as the base image though you can also use alpine to reduce the docker image
+2. The third line installs required packages in Ubuntu and installs nginx server, zip utility and curl to dowload files
+3. The next command ensures that nginx runs in the background. Nginx is a commonly used webserver
+4. "mkdir -p /var/www/html" craetes a working directory where content is to be served by nginx
+5. "curl.." command downlaods the game's source code as a zip and saves it to the /master.zip file
+6. "cd /var/wwww/html" changes directory into the working directory
+7. "unzip.." extracts the contents
+8. "mv.." moves the contents to the current directory
+9. "rm -rf ..." cleans up and removes the extracted directory 
+10."Expose 80" exposes port 80 in the container to traffic
+11. last command is the point of execution of the created container and starts the nginx server in the background.
+
+
 ## Pushing to Dockerhub
 Push your build image tagged to your dockerhub account or any container registry account you might want to use.
 
